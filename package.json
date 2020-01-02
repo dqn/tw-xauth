@@ -1,0 +1,19 @@
+{
+  "name": "tw-xauth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "oauth-1.0a": "^2.2.6",
+    "query-string": "^6.9.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5"
+  }
+}
