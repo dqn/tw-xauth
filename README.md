@@ -2,13 +2,13 @@
 
 Authenticate using XAuth
 
-# Installation
+## Installation
 
 ```
 $ npm install dqn/tw-xauth
 ```
 
-# Usage
+## Usage
 
 ```js
 const { xauth } = require('tw-xauth');
