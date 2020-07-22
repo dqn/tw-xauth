@@ -1,9 +1,11 @@
 {
-  "name": "tw-xauth",
-  "version": "1.0.0",
+  "name": "@dqn/tw-xauth",
+  "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
     "test": "jest"
   },
   "keywords": [],

@@ -1,26 +1,29 @@
 # tw-xauth
 
-Authenticate using XAuth
+Authenticate Twitter account using XAuth.
 
 ## Installation
 
 ```
-$ npm install dqn/tw-xauth
+$ npm install @dqn/tw-xauth
 ```
 
 ## Usage
 
 ```js
-const { xauth } = require('tw-xauth');
+const { xauth } = require('@dqn/tw-xauth');
 
 xauth({
-  screenName: 'dqned',
-  password: 'XXXXXXXXXXXXXXX',
+  screenName: 'SCREEN_NAME',
+  password: 'PASSWORD',
   consumerKey: 'CjulERsDeqhhjSme66ECg',
   consumerSecret: 'IQWdVyqFxghAtURHGeGiWAsmCAGmdW3WmbEx6Hck',
-})
-  .then((res) => {
-    console.log(res.oauth_token);
-    console.log(res.oauth_token_secret);
-  });
+}).then((res) => {
+  console.log(res.oauth_token);
+  console.log(res.oauth_token_secret);
+});
 ```
+
+## License
+
+MIT

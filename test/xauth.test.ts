@@ -1,4 +1,4 @@
-import { xauth, XauthConfig } from './xauth';
+import { xauth, XauthConfig } from '../src/xauth';
 
 function getDefaultConfig(): XauthConfig {
   return {
