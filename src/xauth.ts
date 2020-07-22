@@ -6,14 +6,14 @@ import queryString from 'query-string';
 const SIGNATURE_METHOD = 'HMAC-SHA1';
 const OAUTH_VERSION = '1.0a';
 
-type XauthConfig = {
+export type XauthConfig = {
   consumerKey: string;
   consumerSecret: string;
   screenName: string;
   password: string;
 };
 
-type XauthResult = {
+export type XauthResult = {
   oauth_token: string;
   oauth_token_secret: string;
   screen_name: string;
@@ -21,7 +21,7 @@ type XauthResult = {
   x_auth_expires: string;
 };
 
-class XauthError extends Error {}
+export class XauthError extends Error {}
 
 export function xauth(config: XauthConfig): Promise<XauthResult> {
   const oauth = new OAuth({
