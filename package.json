@@ -15,5 +15,10 @@
     "query-string": "^6.9.0",
     "request": "^2.88.0",
     "request-promise": "^4.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.24",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
   }
 }

@@ -1,31 +1,33 @@
-'use strict';
-
-const rp = require('request-promise');
-const crypto = require('crypto');
-const OAuth = require('oauth-1.0a');
-const queryString = require('query-string');
+import crypto from 'crypto';
+import OAuth from 'oauth-1.0a';
+import queryString from 'query-string';
+import rp from 'request-promise';
 
 const SIGNATURE_METHOD = 'HMAC-SHA1';
 const OAUTH_VERSION = '1.0a';
 
-async function xauth(config) {
+type XauthConfig = {
+  consumerKey: string;
+  consumerSecret: string;
+  screenName: string;
+  password: string;
+};
+
+async function xauth(config: XauthConfig) {
   const oauth = new OAuth({
     consumer: {
       key: config.consumerKey,
-      secret: config.consumerSecret
+      secret: config.consumerSecret,
     },
     signature_method: SIGNATURE_METHOD,
-    hash_function: baseString =>
+    hash_function: (baseString) =>
       crypto
-        .createHmac(
-          'sha1',
-          `${encodeURIComponent(config.consumerSecret)}&`,
-        )
+        .createHmac('sha1', `${encodeURIComponent(config.consumerSecret)}&`)
         .update(baseString)
         .digest('base64'),
   });
 
-  const timestamp = Math.floor(new Date().getTime()  / 1000);
+  const timestamp = Math.floor(Date.now() / 1000);
 
   const options = {
     url: 'https://api.twitter.com/oauth/access_token',
@@ -53,8 +55,7 @@ async function xauth(config) {
       oauth_signature: oauth.getSignature(options, config.consumerSecret, data),
     }),
     form: options.data,
-  })
-    .then(queryString.parse);
+  }).then(queryString.parse);
 }
 
 module.exports = {
