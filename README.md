@@ -1,6 +1,7 @@
 # tw-xauth
 
 [![npm version](https://img.shields.io/npm/v/@dqn/tw-xauth.svg)](https://www.npmjs.com/package/@dqn/tw-xauth)
+[![build status](https://github.com/dqn/tw-xauth/workflows/build/badge.svg)](https://github.com/dqn/tw-xauth/actions)
 
 Authenticate Twitter account using XAuth.
 
