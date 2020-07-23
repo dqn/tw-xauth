@@ -1,4 +1,4 @@
-name: main
+name: build
 
 on: [push]
 
@@ -16,11 +16,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Test
+      - name: Build
         run: |
           yarn
           yarn build
-          yarn test
-        env:
-          SCREEN_NAME: ${{ secrets.SCREEN_NAME }}
-          PASSWORD: ${{ secrets.PASSWORD }}
+        #   yarn test
+        # env:
+        #   SCREEN_NAME: ${{ secrets.SCREEN_NAME }}
+        #   PASSWORD: ${{ secrets.PASSWORD }}
