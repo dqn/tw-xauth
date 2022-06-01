@@ -17,7 +17,7 @@
     "query-string": "^7.0.0"
   },
   "devDependencies": {
-    "@types/jest": "27.5.1",
+    "@types/jest": "27.5.2",
     "@types/node": "16.11.38",
     "jest": "28.1.0",
     "ts-jest": "27.1.5",
