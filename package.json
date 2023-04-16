@@ -14,7 +14,7 @@
   "dependencies": {
     "crypto": "^1.0.1",
     "oauth-1.0a": "^2.2.6",
-    "query-string": "^7.0.0"
+    "query-string": "^8.0.0"
   },
   "devDependencies": {
     "@types/jest": "29.5.0",
